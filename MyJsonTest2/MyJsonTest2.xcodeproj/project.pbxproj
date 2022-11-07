@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611AB479762BF51112948415 /* Pods_MyJsonTest2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92ADAC9D4A74F63C80E0C8F /* Pods_MyJsonTest2.framework */; };
 		FEE0A74F29198B6A0060C361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0A74E29198B6A0060C361 /* AppDelegate.swift */; };
 		FEE0A75129198B6A0060C361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0A75029198B6A0060C361 /* SceneDelegate.swift */; };
 		FEE0A75329198B6A0060C361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE0A75229198B6A0060C361 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A74CBA0A981F8610327B1C5 /* Pods-MyJsonTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyJsonTest2.debug.xcconfig"; path = "Target Support Files/Pods-MyJsonTest2/Pods-MyJsonTest2.debug.xcconfig"; sourceTree = "<group>"; };
+		B021129F819F2BB5CAEA119A /* Pods-MyJsonTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyJsonTest2.release.xcconfig"; path = "Target Support Files/Pods-MyJsonTest2/Pods-MyJsonTest2.release.xcconfig"; sourceTree = "<group>"; };
+		D92ADAC9D4A74F63C80E0C8F /* Pods_MyJsonTest2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyJsonTest2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0A74B29198B6A0060C361 /* MyJsonTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyJsonTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE0A74E29198B6A0060C361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE0A75029198B6A0060C361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				611AB479762BF51112948415 /* Pods_MyJsonTest2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E40FFD60E7F5CE3E779B5AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A74CBA0A981F8610327B1C5 /* Pods-MyJsonTest2.debug.xcconfig */,
+				B021129F819F2BB5CAEA119A /* Pods-MyJsonTest2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC5CDDC0B82CC80936C81410 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D92ADAC9D4A74F63C80E0C8F /* Pods_MyJsonTest2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEE0A74229198B6A0060C361 = {
 			isa = PBXGroup;
 			children = (
 				FEE0A74D29198B6A0060C361 /* MyJsonTest2 */,
 				FEE0A74C29198B6A0060C361 /* Products */,
+				2E40FFD60E7F5CE3E779B5AA /* Pods */,
+				BC5CDDC0B82CC80936C81410 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEE0A75F29198B6B0060C361 /* Build configuration list for PBXNativeTarget "MyJsonTest2" */;
 			buildPhases = (
+				C4A61C73C308DF759B6CE572 /* [CP] Check Pods Manifest.lock */,
 				FEE0A74729198B6A0060C361 /* Sources */,
 				FEE0A74829198B6A0060C361 /* Frameworks */,
 				FEE0A74929198B6A0060C361 /* Resources */,
+				69EAEE2A1D3CB454B93E420A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69EAEE2A1D3CB454B93E420A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyJsonTest2/Pods-MyJsonTest2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyJsonTest2/Pods-MyJsonTest2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyJsonTest2/Pods-MyJsonTest2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4A61C73C308DF759B6CE572 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyJsonTest2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FEE0A74729198B6A0060C361 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		FEE0A76029198B6B0060C361 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A74CBA0A981F8610327B1C5 /* Pods-MyJsonTest2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		FEE0A76129198B6B0060C361 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B021129F819F2BB5CAEA119A /* Pods-MyJsonTest2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

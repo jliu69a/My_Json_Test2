@@ -12,6 +12,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home"
+        self.title = "Home 2"
     }
 }
