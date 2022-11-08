@@ -9,9 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let viewModel = BooksViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Home 2"
+        self.title = "Home"
+        viewModel.delegate = self
+        
+        viewModel.allBooks()
     }
+    
+    func testingPrint() {
+        print("-> books : \(viewModel.booksList)")
+    }
+    
+}
+
+extension ViewController: BooksViewModelDelegate {
+    
+    func didLoadBooksData() {
+        testingPrint()
+    }
+    
 }
