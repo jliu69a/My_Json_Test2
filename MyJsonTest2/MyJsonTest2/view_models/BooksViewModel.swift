@@ -29,8 +29,8 @@ class BooksViewModel: NSObject {
         DatasManager().booksData() { [weak self] (rawData: Data?) in
             if let booksData = rawData {
                 self?.booksList = self?.parseBooksData(data: booksData) ?? []
-                self?.delegate?.didLoadBooksData()
             }
+            self?.delegate?.didLoadBooksData()
             completion()
         }
     }
@@ -46,6 +46,20 @@ class BooksViewModel: NSObject {
 
         return books
     }
+}
+
+extension BooksViewModel {
     
+    func totalSection() -> Int {
+        return 1
+    }
+    
+    func totalRowsInSection(sectionIndex: Int) -> Int {
+        return booksList.count
+    }
+    
+    func rowItemAtIndex(rowIndex: Int) -> Book {
+        return rowIndex < booksList.count ? booksList[rowIndex] : Book()
+    }
     
 }

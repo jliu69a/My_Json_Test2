@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zvH-xX-P1K">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -15,14 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wPF-QV-BEd">
+                                <rect key="frame" x="15" y="101" width="360" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wTT-YK-oWx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3fm-Rr-e9e"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wPF-QV-BEd" secondAttribute="trailing" constant="15" id="6R9-WH-RlD"/>
+                            <constraint firstItem="wPF-QV-BEd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Kg3-lH-kVX"/>
+                            <constraint firstItem="wPF-QV-BEd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="NJ3-Mh-Rn0"/>
+                            <constraint firstItem="wPF-QV-BEd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="duF-Lb-EpE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YcI-Lj-L8h"/>
+                    <connections>
+                        <outlet property="tableView" destination="wPF-QV-BEd" id="ybV-Wm-zyU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="-28.436018957345969"/>
+        </scene>
+        <!--View Details Controller-->
+        <scene sceneID="mAG-V7-KqN">
+            <objects>
+                <viewController storyboardIdentifier="ViewDetailsController" id="pvm-lf-Bpv" customClass="ViewDetailsController" customModule="MyJsonTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aeT-V8-3ha">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-gf-H8s">
+                                <rect key="frame" x="20" y="77" width="350" height="703"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cKI-29-ibJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cKI-29-ibJ" firstAttribute="trailing" secondItem="GJX-gf-H8s" secondAttribute="trailing" constant="20" id="9oL-4H-4hE"/>
+                            <constraint firstItem="GJX-gf-H8s" firstAttribute="top" secondItem="cKI-29-ibJ" secondAttribute="top" constant="30" id="9w7-Hl-LLE"/>
+                            <constraint firstItem="GJX-gf-H8s" firstAttribute="leading" secondItem="cKI-29-ibJ" secondAttribute="leading" constant="20" id="ZGO-mc-sD0"/>
+                            <constraint firstItem="cKI-29-ibJ" firstAttribute="bottom" secondItem="GJX-gf-H8s" secondAttribute="bottom" constant="30" id="oy8-sJ-ZX1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="GJX-gf-H8s" id="uOW-mG-8Oz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGl-FP-v9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096.9230769230767" y="-28.436018957345969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Hl-Nh-qfF">
