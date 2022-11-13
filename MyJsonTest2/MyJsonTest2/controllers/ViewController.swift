@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellId")
         
         viewModel.delegate = self
-        viewModel.allBooks()
+        //viewModel.allBooks()
+        viewModel.allBooksWithSession()
     }
     
     override func viewWillAppear(_ animated: Bool) {

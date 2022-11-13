@@ -20,4 +20,16 @@ class DatasManager: NSObject {
             completion(bookData)
         }
     }
+    
+    func booksSessionData(completion: @escaping (Data)->()) {
+        
+        //-- not using Alamofire or SwiftJSON
+        
+        let url = URL(string: "http://www.mysohoplace.com/php_hdb/testing/load_data.php")!
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            completion(data)
+        }
+        task.resume()
+    }
 }

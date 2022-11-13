@@ -20,6 +20,8 @@ class BooksViewModel: NSObject {
     
     var booksList = [Book]()
     
+    //-- with third party frameworks
+    
     func allBooks() {
         loadingBooks() {}
     }
@@ -45,6 +47,26 @@ class BooksViewModel: NSObject {
         }
 
         return books
+    }
+    
+    //-- with Apple libraries
+    
+    func allBooksWithSession() {
+        loadingBooksWithSession {}
+    }
+    
+    func loadingBooksWithSession(completion: @escaping () -> Void) {
+        
+        DatasManager().booksSessionData() { [weak self] (rawData: Data) in
+            do {
+                self?.booksList = try JSONDecoder().decode([Book].self, from: rawData)
+                DispatchQueue.main.sync {
+                    self?.delegate?.didLoadBooksData()
+                }
+            } catch {
+                print(error)
+            }
+        }
     }
 }
 
